@@ -5,6 +5,8 @@
   "homepage": "https://.github.io/",
   "main": "lib/index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploygithub": "gh-pages -d build",
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
